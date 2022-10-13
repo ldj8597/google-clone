@@ -23,7 +23,7 @@ export default function User() {
                 alt={session.user.name!}
                 width={60}
                 height={60}
-                className="w-10 h-10 p-0.5 hover:bg-gray-400 rounded-full object-cover cursor-pointer"
+                className="w-10 h-10 p-0.5 hover:bg-slate-300 rounded-full object-cover cursor-pointer"
               />
             </button>
           ) : (
