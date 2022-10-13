@@ -2,8 +2,8 @@ import { GetServerSideProps } from "next";
 import { getProviders, signIn } from "next-auth/react";
 import { NextPageWithLayout } from "../_app";
 import type { Provider } from "next-auth/providers";
-import Image from "next/future/image";
 import Logo from "@/components/Logo";
+import LayoutWithFooter from "@/components/layout/LayoutWithFooter";
 
 const SignInPage: NextPageWithLayout<{
   providers: ReturnType<typeof getProviders>;
@@ -39,5 +39,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: { providers },
   };
 };
+
+SignInPage.getLayout = (page) => <LayoutWithFooter>{page}</LayoutWithFooter>;
 
 export default SignInPage;
