@@ -17,10 +17,10 @@ export default function SearchFrom({ searchType = "" }: SearchFormProps) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        if (!searchTerm) return;
+        if (!searchTerm.trim()) return;
         router.push({
           pathname: "/search",
-          query: { term: searchTerm, searchType },
+          query: { term: searchTerm.trim(), searchType },
         });
       }}
       className="w-full flex flex-col items-center gap-10"
