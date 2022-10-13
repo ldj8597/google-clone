@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 @layer components {
+  .page {
+    @apply w-full min-h-screen;
+  }
+
   .link {
     @apply cursor-pointer hover:underline;
+  }
+
+  .btn {
+    @apply px-5 py-2 text-white rounded-md hover:shadow-md;
   }
 }

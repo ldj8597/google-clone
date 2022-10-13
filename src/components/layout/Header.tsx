@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import User from "../User";
 
@@ -10,7 +11,7 @@ export default function Header({ className }: HeaderProps) {
   return (
     <header
       className={clsx(
-        "py-8 flex items-center justify-between text-sm text-gray-700",
+        "z-10 fixed w-screen bg-white py-5 flex items-center justify-between text-sm text-gray-700",
         className
       )}
     >
