@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import Header from "./Header";
 import SearchHeader from "./SearchHeader";
@@ -8,10 +9,13 @@ export default function LayoutWithSearch({
 }: {
   children: ReactNode;
 }) {
+  const router = useRouter();
+  const { term } = router.query;
+
   return (
     <>
       <Head>
-        <title>Google Clone</title>
+        <title>{`${term} - Search page`}</title>
       </Head>
       <SearchHeader className="px-6 mx-auto" />
       <main className="px-6 mx-auto">{children}</main>

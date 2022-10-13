@@ -27,11 +27,11 @@ export default function SearchBar() {
           type="search"
           className="pl-5 pr-24 w-full rounded-full border-slate-300 hover:shadow-md focus:ring-0 focus:border-slate-300 focus:shadow-md"
         />
-        <div className="absolute w-px h-3/5 right-20 top-1/2 -translate-y-1/2 bg-slate-400" />
+        <div className="hidden sm:block absolute w-px h-3/5 right-20 top-1/2 -translate-y-1/2 bg-slate-400" />
         <button type="submit">
-          <AiOutlineSearch className="w-5 h-5 text-slate-500 absolute right-2 top-1/2 -translate-y-1/2" />
+          <AiOutlineSearch className="hidden sm:block w-5 h-5 text-blue-500 absolute right-2 top-1/2 -translate-y-1/2" />
         </button>
-        <BsMicFill className="w-5 h-5 text-slate-500 absolute right-12 top-1/2 -translate-y-1/2" />
+        <BsMicFill className="hidden sm:block w-5 h-5 text-blue-500 absolute right-12 top-1/2 -translate-y-1/2" />
       </div>
     </form>
   );
