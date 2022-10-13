@@ -2,9 +2,15 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsMicFill } from "react-icons/bs";
+import { useAtom } from "jotai";
+import { searchTermAtom } from "@/pages/_app";
 
-export default function SearchFrom() {
-  const [searchTerm, setSearchTerm] = useState("");
+type SearchFormProps = {
+  searchType?: string;
+};
+
+export default function SearchFrom({ searchType = "" }: SearchFormProps) {
+  const [searchTerm, setSearchTerm] = useAtom(searchTermAtom);
   const router = useRouter();
 
   return (
@@ -14,7 +20,7 @@ export default function SearchFrom() {
         if (!searchTerm) return;
         router.push({
           pathname: "/search",
-          query: { term: searchTerm },
+          query: { term: searchTerm, searchType },
         });
       }}
       className="w-full flex flex-col items-center gap-10"

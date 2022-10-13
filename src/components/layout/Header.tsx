@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import { useSession } from "next-auth/react";
 import Link from "next/link";
 import User from "../User";
 
@@ -21,7 +20,9 @@ export default function Header({ className }: HeaderProps) {
       </div>
       <div className="flex items-center gap-10">
         <p className="link">Gmail</p>
-        <p className="link">Images</p>
+        <Link href="/image">
+          <p className="link">Images</p>
+        </Link>
         <User />
       </div>
     </header>
