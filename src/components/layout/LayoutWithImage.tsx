@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import Header from "./Header";
+import DefaultHeader from "./DefaultHeader";
 import ImageHeader from "./ImageHeader";
 
 export default function LayoutWithImage({ children }: { children: ReactNode }) {

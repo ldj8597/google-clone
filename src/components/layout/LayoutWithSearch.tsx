@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
-import Header from "./Header";
+import DefaultHeader from "./DefaultHeader";
 import SearchHeader from "./SearchHeader";
 
 export default function LayoutWithSearch({
@@ -17,7 +17,7 @@ export default function LayoutWithSearch({
       <Head>
         <title>{`${term} - Search page`}</title>
       </Head>
-      <SearchHeader className="px-6 mx-auto" />
+      <SearchHeader className="mx-auto" />
       <main className="px-6 mx-auto">{children}</main>
     </>
   );

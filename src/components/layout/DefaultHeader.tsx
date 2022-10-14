@@ -6,7 +6,7 @@ type HeaderProps = {
   className?: string;
 };
 
-export default function Header({ className }: HeaderProps) {
+export default function DefaultHeader({ className }: HeaderProps) {
   return (
     <header
       className={clsx(
